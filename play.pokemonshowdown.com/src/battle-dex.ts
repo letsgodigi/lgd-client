@@ -180,7 +180,8 @@ const Dex = new class implements ModdedDex {
 	pokeballs: string[] | null = null;
 
 	//TODO we might want to move this to something like data/petmods
-	readonly modResourcePrefix = 'https://raw.githubusercontent.com/scoopapa/dh2/master/data/mods/';
+	// Digimon Fix
+	readonly modResourcePrefix = 'https://raw.githubusercontent.com/letsgodigi/lgd-server/main/data/mods/';
 
 
 	resourcePrefix = (() => {
