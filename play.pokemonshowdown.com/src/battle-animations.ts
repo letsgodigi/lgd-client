@@ -564,8 +564,10 @@ export class BattleScene implements BattleSceneStub {
 		this.gen = gen;
 		this.activeCount = this.battle.nearSide?.active.length || 1;
 
+		let resourcePrefix = Dex.resourcePrefix;
 		const isSPL = (typeof this.battle.rated === 'string' && this.battle.rated.startsWith("Smogon Premier League"));
 		let bg: string;
+		const isDigimon = (this.battle.dex.modid === 'digimon'); //Digimon Backgrounds
 		if (isSPL) {
 			if (gen <= 1) bg = 'fx/bg-gen1-spl.png';
 			else if (gen <= 2) bg = 'fx/bg-gen2-spl.png';
@@ -573,6 +575,9 @@ export class BattleScene implements BattleSceneStub {
 			else if (gen <= 4) bg = 'fx/bg-gen4-spl.png';
 			else bg = 'fx/bg-spl.png';
 			this.setBgm(-101);
+		} else if(isDigimon) { //Digimon Backgrounds
+			resourcePrefix = Dex.modResourcePrefix + 'gen7digimon/';
+			bg = 'bg/' + BattleBackdropsDigimon[this.numericId % BattleBackdropsDigimon.length];
 		} else {
 			if (gen <= 1) bg = 'fx/bg-gen1.png?';
 			else if (gen <= 2) bg = 'fx/bg-gen2.png?';
@@ -584,7 +589,7 @@ export class BattleScene implements BattleSceneStub {
 
 		this.backdropImage = bg;
 		if (this.$bg) {
-			this.$bg.css('background-image', 'url(' + Dex.resourcePrefix + '' + this.backdropImage + ')');
+			this.$bg.css('background-image', 'url(' + resourcePrefix + '' + this.backdropImage + ')');
 		}
 	}
 
@@ -3216,6 +3221,18 @@ const BattleBackdrops = [
 	'bg-orassea.jpg',
 	'bg-skypillar.jpg',
 ];
+const BattleBackdropsDigimon = [
+	'bg-digiakihabara.png',
+	'bg-digiavalon.png',
+	'bg-digikowloon.png',
+	'bg-digimemory.png',
+	'bg-diginetwork.png',
+	'bg-digiodaiba.png',
+	'bg-digishinjuku.png',
+	'bg-digispace.png',
+	'bg-digiueno.png',
+];
+
 
 export const BattleOtherAnims: AnimTable = {
 	hitmark: {
