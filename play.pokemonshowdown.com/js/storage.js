@@ -69,8 +69,8 @@ Storage.bg = {
 		}
 
 		// April Fool's 2016 - Digimon theme
-		// bgid = 'digimon';
-		// bgUrl = Dex.resourcePrefix + 'sprites/afd/digimonbg.jpg';
+		bgid = 'digimon';
+		bgUrl = Dex.resourcePrefix + 'sprites/afd/digimonbg.jpg';
 
 		var background;
 		if (bgUrl.charAt(0) === '#') {

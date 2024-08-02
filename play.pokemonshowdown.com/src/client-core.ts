@@ -225,8 +225,8 @@ const PSBackground = new class extends PSStreamModel {
 		}
 
 		// April Fool's 2016 - Digimon theme
-		// bgid = 'digimon';
-		// bgUrl = PSURL + 'sprites/afd/digimonbg.jpg';
+		bgid = 'digimon';
+		bgUrl = PSURL + 'sprites/afd/digimonbg.jpg';
 
 		this.changeCount++;
 
