@@ -19,7 +19,7 @@ Config.whitelist = [
 // address bar is `Config.routes.client`.
 Config.defaultserver = {
 	id: 'dragonheaven',
-	host: '191.101.232.116',
+	host: 'sublvl.ddns.net',
 	port: 8000,
 	httpport: 80,
 	altport: 80,
@@ -36,7 +36,7 @@ Config.customcolors = {
 Config.version = "0.11.2";
 
 Config.routes = {
-	root: 'petmodsdh.com',
+	root: '191.101.232.116',
 	client: 'localhost',
 	dex: 'dex.pokemonshowdown.com',
 	replays: 'replay.pokemonshowdown.com',
