@@ -1151,7 +1151,9 @@
 			this.send('/forfeit');
 		},
 		saveReplay: function () {
-			this.send('/savereplay');
+			// Uploading replay function doesn't actually work
+			// this.send('/savereplay');
+			app.addPopupMessage("Replay uploading is not currently supported.");
 		},
 		openBattleOptions: function () {
 			app.addPopup(BattleOptionsPopup, {battle: this.battle, room: this});
