@@ -41,13 +41,15 @@
 				buf += '<p>(We\'ll be back up in a few hours.)</p>';
 				buf += '</div>';
 			} else {
-				buf += '<div class="menugroup"><form class="battleform" data-search="1">';
-				buf += '<p><label class="label">Format:</label>' + this.renderFormats() + '</p>';
-				buf += '<p><label class="label">Team:</label>' + this.renderTeams() + '</p>';
-				buf += '<p><label class="label" name="partner" style="display:none">';
-				buf += 'Partner: <input name="teammate" /></label></p>';
-				buf += '<p><label class="checkbox"><input type="checkbox" name="private" ' + (Storage.prefs('disallowspectators') ? 'checked' : '') + ' /> <abbr title="You can still invite spectators by giving them the URL or using the /invite command">Don\'t allow spectators</abbr></label></p>';
-				buf += '<p><button class="button mainmenu1 big" name="search"><strong>Battle!</strong><br /><small>Find a random opponent</small></button></p></form></div>';
+				// Remove matchmaking battle menu since it doesn't work
+				
+				// buf += '<div class="menugroup"><form class="battleform" data-search="1">';
+				// buf += '<p><label class="label">Format:</label>' + this.renderFormats() + '</p>';
+				// buf += '<p><label class="label">Team:</label>' + this.renderTeams() + '</p>';
+				// buf += '<p><label class="label" name="partner" style="display:none">';
+				// buf += 'Partner: <input name="teammate" /></label></p>';
+				// buf += '<p><label class="checkbox"><input type="checkbox" name="private" ' + (Storage.prefs('disallowspectators') ? 'checked' : '') + ' /> <abbr title="You can still invite spectators by giving them the URL or using the /invite command">Don\'t allow spectators</abbr></label></p>';
+				// buf += '<p><button class="button mainmenu1 big" name="search"><strong>Battle!</strong><br /><small>Find a random opponent</small></button></p></form></div>';
 			}
 
 			buf += '<div class="menugroup">';
