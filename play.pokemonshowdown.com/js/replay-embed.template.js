@@ -29,8 +29,9 @@ function requireScript(url) {
 }
 
 var route = 'http://digimonshowdown.serverpit.com';
+var route_petmods = 'http://petmodsdh.com';
 
-linkStyle(route + '/style/font-awesome.css?');
+linkStyle(route_petmods + '/style/font-awesome.css?');
 linkStyle(route + '/style/battle.css?a7');
 linkStyle(route + '/style/replay.css?a7');
 linkStyle(route + '/style/utilichart.css?a7');
