@@ -155,10 +155,10 @@
 				var $favicon = $('#dynamic-favicon');
 				if (!!$favicon.data('on') !== !!notificationCount) {
 					if (notificationCount) {
-						$favicon.attr('href', Config.routes.root + '/favicon-notify.ico');
+						$favicon.attr('href', 'http://' + Config.routes.root + '/favicon-notify.ico');
 						$favicon.data('on', '1');
 					} else {
-						$favicon.attr('href', Config.routes.root + '/favicon.ico');
+						$favicon.attr('href', 'http://' + Config.routes.root + '/favicon.ico');
 						$favicon.data('on', '');
 					}
 				}
@@ -199,7 +199,7 @@
 			for (var i in app.rooms) {
 				if (app.rooms[i] !== app.curRoom && app.rooms[i].notificationClass === ' notifying') notificationClass = ' notifying';
 			}
-			var buf = '<ul><li><a class="button minilogo' + notificationClass + '" href="' + app.root + '"><img src="' + Config.routes.root + 'favicon-256.png" width="32" height="32" alt="Pok&eacute;mon Showdown! (beta)" /><i class="fa fa-caret-down" style="display:inline-block"></i></a></li></ul>';
+			var buf = '<ul><li><a class="button minilogo' + notificationClass + '" href="' + app.root + '"><img src="http://' + Config.routes.root + '/favicon-256.png" width="32" height="32" alt="Pok&eacute;mon Showdown! (beta)" /><i class="fa fa-caret-down" style="display:inline-block"></i></a></li></ul>';
 
 			buf += '<ul>' + this.renderRoomTab(app.curRoom) + '</ul>';
 
