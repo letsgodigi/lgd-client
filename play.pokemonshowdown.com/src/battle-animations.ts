@@ -2903,6 +2903,9 @@ interface AnimData {
 }
 export type AnimTable = {[k: string]: AnimData};
 
+// entries included in ModdedBattleEffects will override default assets
+const ModdedBattleEffects = ['pokeball'];
+
 const BattleEffects: {[k: string]: SpriteData} = {
 	wisp: {
 		url: 'wisp.png',
@@ -3165,7 +3168,9 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	if (!window.Dex || !Dex.resourcePrefix) return;
 	for (const id in BattleEffects) {
 		if (!BattleEffects[id].url) continue;
-		BattleEffects[id].url = Dex.fxPrefix + BattleEffects[id].url;
+		let fxPrefix = Dex.fxPrefix;
+		if (ModdedBattleEffects.includes(id)) fxPrefix = Dex.modResourcePrefix + 'gen7digimon/fx/'; //Digimon fx
+		BattleEffects[id].url = fxPrefix + BattleEffects[id].url;
 	}
 })();
 const BattleBackdropsThree = [
